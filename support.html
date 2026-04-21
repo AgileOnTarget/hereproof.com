@@ -1,171 +1,217 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HereProof — Support</title>
-  <meta name="description" content="HereProof support. Contact and answers to common questions.">
+  <meta name="description" content="HereProof support. Answers to common questions." />
   <style>
-    :root {
-      color-scheme: light dark;
-      --bg: #ffffff;
-      --fg: #111111;
-      --muted: #666666;
-      --accent: #0a7cff;
-      --border: #e6e6e6;
-      --card: #f8f8f8;
+    :root{
+      --bg:#06182f;
+      --bg-2:#0c2242;
+      --card:#0f2950;
+      --card-soft:#10294c;
+      --line:rgba(255,255,255,.12);
+      --text:#f5fbff;
+      --muted:#bfd3e7;
+      --teal:#22d3c5;
+      --teal-dark:#11b8ae;
+      --violet:#7c5cff;
+      --shadow:0 20px 60px rgba(0,0,0,.28);
+      --radius:24px;
+      --max:820px;
     }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #111111;
-        --fg: #f5f5f5;
-        --muted: #a0a0a0;
-        --accent: #4ea8ff;
-        --border: #2a2a2a;
-        --card: #1a1a1a;
-      }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(34,211,197,.14), transparent 28%),
+        radial-gradient(circle at top right, rgba(124,92,255,.16), transparent 24%),
+        linear-gradient(180deg, #041325 0%, #081b34 45%, #0a1f3d 100%);
+      line-height:1.6;
+      min-height:100vh;
     }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--fg);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
+    a{color:var(--teal);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+    .nav{
+      position:sticky;top:0;z-index:20;
+      backdrop-filter: blur(16px);
+      background:rgba(4,19,37,.75);
+      border-bottom:1px solid var(--line);
     }
-    main {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 2.5rem 1.5rem 4rem;
+    .nav-inner{
+      max-width:1200px;margin:0 auto;padding:14px 24px;
+      display:flex;align-items:center;justify-content:space-between;gap:24px;
     }
-    header { margin-bottom: 2rem; }
-    h1 { font-size: 2rem; margin: 0 0 0.25rem; letter-spacing: -0.01em; }
-    .meta { color: var(--muted); font-size: 0.9rem; }
-    h2 { font-size: 1.25rem; margin: 2.25rem 0 0.5rem; }
-    h3 { font-size: 1rem; margin: 1.5rem 0 0.35rem; }
-    p { margin: 0.5rem 0; }
-    ul { margin: 0.5rem 0 1rem; padding-left: 1.25rem; }
-    li { margin: 0.25rem 0; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .contact {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.25rem 1.5rem;
-      margin: 1.5rem 0;
+    .brand{
+      display:flex;align-items:center;gap:12px;font-weight:700;
     }
-    .contact h2 { margin-top: 0; }
-    details {
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 0.75rem 1rem;
-      margin: 0.5rem 0;
+    .brand img{height:44px;width:auto;display:block}
+    .nav-links{
+      display:flex;gap:22px;align-items:center;color:var(--muted);font-weight:600
     }
-    details[open] { background: var(--card); }
-    summary {
-      font-weight: 600;
-      cursor: pointer;
-      padding: 0.25rem 0;
+    .nav-links a{color:var(--muted)}
+    .nav-links a:hover{color:var(--text);text-decoration:none}
+    .nav-links a.active{color:var(--text)}
+
+    main{padding:48px 0 80px}
+    header.page-header{margin-bottom:28px;text-align:center}
+    h1{
+      font-size:clamp(2rem,4.4vw,2.9rem);margin:0 0 10px;
+      letter-spacing:-.02em;line-height:1.1;
     }
-    summary::-webkit-details-marker { display: none; }
-    summary::before {
-      content: "▸ ";
-      color: var(--muted);
-      margin-right: 0.25rem;
+    .meta{color:var(--muted);font-size:1.02rem;margin:0}
+    h2{
+      font-size:clamp(1.3rem,2.4vw,1.55rem);
+      margin:2.25rem 0 .9rem;letter-spacing:-.01em;
     }
-    details[open] summary::before {
-      content: "▾ ";
+    p{margin:.5rem 0;color:var(--muted)}
+    p strong{color:var(--text)}
+
+    details{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:16px 20px;
+      margin:.75rem 0;
+      transition:border-color .2s ease, background .2s ease;
     }
-    nav {
-      margin-top: 2.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      font-size: 0.95rem;
+    details[open]{
+      background:linear-gradient(135deg,rgba(34,211,197,.08),rgba(124,92,255,.05));
+      border-color:rgba(34,211,197,.3);
     }
-    footer {
-      margin-top: 2rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
-      font-size: 0.85rem;
-      color: var(--muted);
+    summary{
+      font-weight:700;cursor:pointer;padding:.25rem 0;
+      color:var(--text);font-size:1.02rem;
+      list-style:none;
+      display:flex;align-items:center;gap:.5rem;
+    }
+    summary::-webkit-details-marker{display:none}
+    summary::before{
+      content:"+";
+      color:var(--teal);font-weight:800;font-size:1.2rem;
+      width:20px;display:inline-block;
+      transition:transform .2s ease;
+    }
+    details[open] summary::before{
+      content:"−";
+    }
+    details p{margin-top:.75rem}
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:28px 0;margin-top:36px;
+      color:var(--muted);font-size:.92rem;
+    }
+    footer .wrap{max-width:1200px}
+    .footer-row{
+      display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;
+    }
+    .footer-links{display:flex;gap:18px;flex-wrap:wrap}
+    .footer-links a{color:var(--muted)}
+
+    @media (max-width:640px){
+      .wrap{padding:0 18px}
+      .nav-inner{padding:12px 18px}
+      .nav-links{display:none}
+      main{padding:32px 0 60px}
     }
   </style>
 </head>
 <body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/">
+        <img src="hereproof_logo.png" alt="HereProof logo" />
+      </a>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/support" class="active">Support</a>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <header>
-      <h1>HereProof — Support</h1>
-      <p class="meta">Small app. Real person on the other end of the email.</p>
-    </header>
+    <div class="wrap">
+      <header class="page-header">
+        <h1>Support</h1>
+        <p class="meta">Answers to the questions that come up most often.</p>
+      </header>
 
-    <h2>Common questions</h2>
+      <h2>Common questions</h2>
 
-    <details>
-      <summary>Is my photo uploaded anywhere?</summary>
-      <p>No. HereProof has no server. Your photo stays on your iPhone until you tap Share. When you share it, iOS's share sheet hands it to whatever app you pick — Messages, Mail, Photos, etc. HereProof doesn't see or route that share.</p>
-    </details>
+      <details>
+        <summary>Is my photo uploaded anywhere?</summary>
+        <p>No. HereProof has no server. Your photo stays on your iPhone until you tap Share. When you share it, iOS's share sheet hands it to whatever app you pick — Messages, Mail, Photos, etc. HereProof doesn't see or route that share.</p>
+      </details>
 
-    <details>
-      <summary>What's a "presence credit"?</summary>
-      <p>It's a simple counter that gates the Create button. HereProof seeds you one credit on first launch. Creating a HereProof uses the credit. In v1 the credit system is a demonstration — it shows the gate working without any payment or account layer behind it. Future versions may let credits come from other places, but for now it's just the single seed.</p>
-    </details>
+      <details>
+        <summary>What's a "presence credit"?</summary>
+        <p>It's a simple counter that gates the Create button. HereProof seeds you one credit on first launch. Creating a HereProof uses the credit. In v1 the credit system is a demonstration — it shows the gate working without any payment or account layer behind it. Future versions may let credits come from other places, but for now it's just the single seed.</p>
+      </details>
 
-    <details>
-      <summary>How do I get more presence credits?</summary>
-      <p>In v1, delete and reinstall the app to reset the demo seed. There's no purchase, no earning mechanism, no account. v1 is a demo of the flow, not a full production product.</p>
-    </details>
+      <details>
+        <summary>How do I get more presence credits?</summary>
+        <p>In v1, delete and reinstall the app to reset the demo seed. There's no purchase, no earning mechanism, no account. v1 is a demo of the flow, not a full production product.</p>
+      </details>
 
-    <details>
-      <summary>Can I turn off the city / date text on my HereProof?</summary>
-      <p>Yes. On the review screen (after taking the photo), leave the "Include location" toggle off and the "Describe this moment" field empty. The resulting HereProof will just be the photo with the timestamp at the bottom.</p>
-    </details>
+      <details>
+        <summary>Can I turn off the city / date text on my HereProof?</summary>
+        <p>Yes. On the review screen (after taking the photo), leave the "Include location" toggle off and the "Describe this moment" field empty. The resulting HereProof will just be the photo with the timestamp at the bottom.</p>
+      </details>
 
-    <details>
-      <summary>Why does HereProof want my location?</summary>
-      <p>Only if you ask it to. The "Include location" toggle is off by default. When you turn it on, iOS asks you for permission. HereProof uses CoreLocation to get a coarse fix, converts it to "City, State" on your phone, and renders that string onto the image you'll share. The raw coordinates never leave your device.</p>
-    </details>
+      <details>
+        <summary>Why does HereProof want my location?</summary>
+        <p>Only if you ask it to. The "Include location" toggle is off by default. When you turn it on, iOS asks you for permission. HereProof uses CoreLocation to get a coarse fix, converts it to "City, State" on your phone, and renders that string onto the image you'll share. The raw coordinates never leave your device.</p>
+      </details>
 
-    <details>
-      <summary>I denied the camera permission. How do I re-enable it?</summary>
-      <p>iOS holds onto the permission decision. Go to <strong>Settings → HereProof → Camera</strong> on your iPhone and toggle it on. Same for Location if you also want that.</p>
-    </details>
+      <details>
+        <summary>I denied the camera permission. How do I re-enable it?</summary>
+        <p>iOS holds onto the permission decision. Go to <strong>Settings → HereProof → Camera</strong> on your iPhone and toggle it on. Same for Location if you also want that.</p>
+      </details>
 
-    <details>
-      <summary>I deleted the app. Can I recover my HereProofs?</summary>
-      <p>A HereProof isn't stored in the app after you share it — it lives wherever you sent it (Messages thread, Photos, etc.). Deleting HereProof clears the app's small on-device state (the credit count and in-memory session data) and nothing else. HereProofs you've already sent are unaffected.</p>
-    </details>
+      <details>
+        <summary>I deleted the app. Can I recover my HereProofs?</summary>
+        <p>A HereProof isn't stored in the app after you share it — it lives wherever you sent it (Messages thread, Photos, etc.). Deleting HereProof clears the app's small on-device state (the credit count and in-memory session data) and nothing else. HereProofs you've already sent are unaffected.</p>
+      </details>
 
-    <details>
-      <summary>Is HereProof a crypto / NFT / wallet app?</summary>
-      <p>No. HereProof v1 is a small consumer app for capturing and sharing a moment. There are no tokens, no wallets, no blockchain, no cryptocurrency. The name is literal — "here" (where you are) + "proof" (what you captured).</p>
-    </details>
+      <details>
+        <summary>Is HereProof a crypto / NFT / wallet app?</summary>
+        <p>No. HereProof v1 is a small consumer app for capturing and sharing a moment. There are no tokens, no wallets, no blockchain, no cryptocurrency. The name is literal — "here" (where you are) + "proof" (what you captured).</p>
+      </details>
 
-    <details>
-      <summary>What iPhones and iOS versions does HereProof support?</summary>
-      <p>HereProof supports iPhone running iOS 16 or later. It's iPhone-only in v1 (no iPad, no Mac).</p>
-    </details>
+      <details>
+        <summary>What iPhones and iOS versions does HereProof support?</summary>
+        <p>HereProof supports iPhone running iOS 16 or later. It's iPhone-only in v1 (no iPad, no Mac).</p>
+      </details>
 
-    <details>
-      <summary>Is HereProof free?</summary>
-      <p>Yes. No in-app purchases, no subscription, no ads.</p>
-    </details>
+      <details>
+        <summary>Is HereProof free?</summary>
+        <p>Yes. No in-app purchases, no subscription, no ads.</p>
+      </details>
 
-    <h2>Privacy</h2>
-    <p>HereProof's privacy stance is short: we don't run a server, we don't have accounts, we don't track you, we don't collect your data. The full policy is at <a href="/privacy">hereproof.com/privacy</a>.</p>
-
-    <nav>
-      <a href="/">Home</a>
-      <a href="/privacy">Privacy Policy</a>
-    </nav>
-
-    <footer>
-      &copy; 2026 Agile On Target LLC.
-    </footer>
+      <h2>Privacy</h2>
+      <p>HereProof's privacy stance is short: we don't run a server, we don't have accounts, we don't track you, we don't collect your data. The full policy is at <a href="/privacy">hereproof.com/privacy</a>.</p>
+    </div>
   </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-row">
+        <div>HereProof • Proof you were there.</div>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/support">Support</a>
+          <span>© 2026 Agile On Target LLC</span>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
