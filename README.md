@@ -1,6 +1,6 @@
 # hereproof.com
 
-Static public site for **HereProof**, the iPhone app by Gravity Lock AI LLC.
+Static public site for **HereProof**, the iPhone app by Agile On Target LLC.
 
 Three pages, zero build step, no JavaScript, no third-party assets. Hosted on GitHub Pages at `hereproof.com`.
 
@@ -41,4 +41,4 @@ CNAME www  agileontarget.github.io
 
 ## License
 
-Content © 2026 Gravity Lock AI LLC. All rights reserved.
+Content © 2026 Agile On Target LLC. All rights reserved.
