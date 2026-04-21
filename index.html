@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HereProof — Proof you were there.</title>
+  <meta name="description" content="HereProof is a small iPhone app that turns a moment into a shareable proof. No account, no server, no tracking.">
+  <meta property="og:title" content="HereProof">
+  <meta property="og:description" content="Proof you were there.">
+  <meta property="og:type" content="website">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --fg: #111111;
+      --muted: #666666;
+      --accent: #0a7cff;
+      --border: #e6e6e6;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111111;
+        --fg: #f5f5f5;
+        --muted: #a0a0a0;
+        --accent: #4ea8ff;
+        --border: #2a2a2a;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+    h1 { font-size: 3rem; margin: 0 0 0.25rem; letter-spacing: -0.02em; }
+    .tagline {
+      font-size: 1.35rem;
+      color: var(--muted);
+      margin: 0 0 3rem;
+    }
+    h2 { font-size: 1.25rem; margin: 2.5rem 0 0.5rem; }
+    p { margin: 0.5rem 0; }
+    ul { margin: 0.5rem 0 1rem; padding-left: 1.25rem; }
+    li { margin: 0.25rem 0; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    nav {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>HereProof</h1>
+    <p class="tagline">Proof you were there.</p>
+
+    <p>HereProof is the simplest way to mark a moment so you can share it later. Open the app, take a photo, add an optional note or the city where you were, and send it on. The photo carries the context with it — no other app required on the other end.</p>
+
+    <h2>What HereProof does</h2>
+    <ul>
+      <li>Capture a moment with the camera.</li>
+      <li>Add an optional note.</li>
+      <li>Optionally include the city you were in.</li>
+      <li>Share it through the iOS share sheet — Messages, Mail, Photos, wherever.</li>
+    </ul>
+
+    <h2>What HereProof doesn't do</h2>
+    <ul>
+      <li>No account. No sign-up. No password.</li>
+      <li>No server. HereProof never sends your data to us.</li>
+      <li>No tracking. No ads. No analytics.</li>
+      <li>Delete the app, delete your data.</li>
+    </ul>
+
+    <nav>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/support">Support</a>
+    </nav>
+
+    <footer>
+      &copy; 2026 Gravity Lock AI LLC.
+    </footer>
+  </main>
+</body>
+</html>

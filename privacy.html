@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HereProof — Privacy Policy</title>
+  <meta name="description" content="HereProof privacy policy. HereProof runs entirely on your iPhone. No server, no account, no tracking.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --fg: #111111;
+      --muted: #666666;
+      --accent: #0a7cff;
+      --border: #e6e6e6;
+      --card: #f8f8f8;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111111;
+        --fg: #f5f5f5;
+        --muted: #a0a0a0;
+        --accent: #4ea8ff;
+        --border: #2a2a2a;
+        --card: #1a1a1a;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+    header { margin-bottom: 2rem; }
+    h1 { font-size: 2rem; margin: 0 0 0.25rem; letter-spacing: -0.01em; }
+    .meta { color: var(--muted); font-size: 0.9rem; }
+    h2 { font-size: 1.3rem; margin: 2.25rem 0 0.5rem; }
+    h3 { font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+    p { margin: 0.5rem 0; }
+    ul { margin: 0.5rem 0 1rem; padding-left: 1.25rem; }
+    li { margin: 0.35rem 0; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .summary {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0 2rem;
+    }
+    .summary h2 { margin-top: 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.95rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 0.6rem 0.6rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    th {
+      font-weight: 600;
+      background: var(--card);
+    }
+    blockquote {
+      margin: 0.75rem 0;
+      padding: 0.5rem 1rem;
+      border-left: 3px solid var(--accent);
+      color: var(--muted);
+      font-style: italic;
+    }
+    nav {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+    footer {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>HereProof — Privacy Policy</h1>
+      <p class="meta">Version 2.0 · Effective April 21, 2026 · Gravity Lock AI LLC</p>
+    </header>
+
+    <div class="summary">
+      <h2>Summary — 60 seconds</h2>
+      <p><strong>HereProof stays on your phone.</strong></p>
+      <p>HereProof is an iPhone app that turns a moment you capture into a shareable proof. We don't run a server that tracks you. We don't have accounts. We don't sell data. We don't use ads or analytics. We don't see your photos, your notes, or your location.</p>
+      <ul>
+        <li><strong>Your photo</strong> stays on your device until you choose to share it using the normal iOS share sheet. Where it goes from there depends on which app you pick.</li>
+        <li><strong>Your note</strong> (the "Describe this moment" text) is rendered into the image you share. We never see it.</li>
+        <li><strong>Your location</strong> (the "Include location" toggle) is off by default. When on, HereProof reads your city from CoreLocation and renders it into the image. We never see it.</li>
+        <li><strong>Your presence-credit count</strong> is a small number stored in iOS app preferences on your device. It doesn't leave your phone.</li>
+      </ul>
+      <p>If you delete the HereProof app, every piece of data HereProof stored on your device is gone.</p>
+    </div>
+
+    <h2>Who we are</h2>
+    <p>HereProof is published by <strong>Gravity Lock AI LLC</strong> ("we", "us", "our"). Contact: <a href="mailto:Tom.Friend@GravityLock.AI">Tom.Friend@GravityLock.AI</a>.</p>
+
+    <h2>What HereProof collects</h2>
+
+    <h3>On your device (never transmitted to us)</h3>
+    <table>
+      <thead>
+        <tr><th>What</th><th>When</th><th>Where it lives</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Your presence-credit count (a small integer)</td><td>The first time HereProof runs, it seeds a count of 1. When you create a HereProof, it decrements by 1.</td><td>iOS app preferences on your iPhone. Deleted when you delete the app.</td></tr>
+        <tr><td>The photo you capture</td><td>Only while you're in the Create flow, until you tap Share or close the app.</td><td>In memory during the Create flow; never written to a separate file by HereProof; not uploaded anywhere.</td></tr>
+        <tr><td>The optional note you type ("Describe this moment")</td><td>Only if you type one.</td><td>Rendered into the shareable image as text on the bottom strip. Not stored separately once you leave the Create flow.</td></tr>
+        <tr><td>A coarse location fix (latitude, longitude, accuracy, city name)</td><td>Only if you turn on the "Include location" toggle and grant iOS permission.</td><td>Rendered into the shareable image as "City, State". Not stored separately once you leave the Create flow.</td></tr>
+        <tr><td>A timestamp of when you created the HereProof</td><td>Always, once you create one.</td><td>Rendered into the shareable image.</td></tr>
+        <tr><td>A small event log (e.g., "credit.consumed", "hereproof.created")</td><td>Internal diagnostics while the app is running.</td><td>In memory only. Not written to disk, not transmitted. Cleared when you close the app.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Off your device (nothing)</h3>
+    <p>HereProof v1 does <strong>not</strong> have a backend server. We do not collect, store, or transmit any data to Gravity Lock AI LLC or to any third party.</p>
+    <p>There is no user account. No login. No sign-up. No email collection. No analytics SDK. No ad SDK. No crash reporting SDK.</p>
+
+    <h2>What HereProof does NOT collect</h2>
+    <ul>
+      <li>Your name, email address, phone number, or any contact information.</li>
+      <li>Your Apple ID, iCloud ID, or any device identifier.</li>
+      <li>Your contacts, address book, or social graph.</li>
+      <li>Biometric data (face templates, Face ID data, fingerprint data). HereProof does not run facial recognition on the photo you capture.</li>
+      <li>Your health, fitness, or medical data.</li>
+      <li>Your financial or payment information.</li>
+      <li>Your precise street address. Location, if enabled, is reverse-geocoded to a coarse "City, State" string and the raw coordinates are never sent to anyone — they are only drawn onto your shared image alongside the city name.</li>
+      <li>Your browsing history, search history, or any data from other apps.</li>
+      <li>Any advertising identifier.</li>
+      <li>Any cryptocurrency, wallet, or blockchain data. HereProof v1 is not a crypto product; there are no wallets, no tokens, no on-chain activity.</li>
+    </ul>
+
+    <h2>iOS permissions HereProof asks for</h2>
+    <p>HereProof asks for at most two iOS permissions. Both are entirely optional (you can deny either) and both prompt you with standard iOS dialogs.</p>
+
+    <p><strong>Camera</strong> — prompted the first time you tap "Create a HereProof". The iOS prompt displays:</p>
+    <blockquote>"HereProof uses the camera so you can capture the moment that becomes your HereProof."</blockquote>
+    <p>Without camera permission, you cannot capture a HereProof. No other use of the camera occurs.</p>
+
+    <p><strong>Location, while using the app</strong> — prompted the first time you tap "Create my HereProof" with the "Include location" toggle turned on. The iOS prompt displays:</p>
+    <blockquote>"HereProof can attach the city where you captured a moment, so your HereProof remembers where you were. Location is optional."</blockquote>
+    <p>We request only "While Using the App". We never request "Always Allow", and we never use background location. If you deny permission or leave the toggle off, HereProof still works — it just skips the location step.</p>
+
+    <p>HereProof does not ask for Microphone, Photo Library, Contacts, Calendar, Reminders, Health, HomeKit, Motion, Bluetooth, Local Network, or NFC.</p>
+
+    <h2>What happens when you share a HereProof</h2>
+    <p>When you tap Share on the success screen, iOS opens its standard share sheet. HereProof hands iOS a single image (your captured photo with the optional metadata strip rendered on it) and steps out of the way. Whatever happens next — sending to Messages, saving to Photos, posting to an app you chose — is governed by <strong>that app's</strong> privacy policy, not ours. We never see the share destination, and we never see what you do after leaving the share sheet.</p>
+    <p>HereProof does not share presence credits, internal identifiers, or any other data. The only thing that ever leaves HereProof via the share sheet is the rendered image you explicitly chose to share.</p>
+
+    <h2>Data retention</h2>
+    <ul>
+      <li><strong>On-device data</strong> (credit count, in-memory artifacts, event log) exists only for as long as you have HereProof installed. Delete the app and everything goes with it. iOS also clears in-memory state when the app is terminated.</li>
+      <li><strong>Server-side data</strong>: none. We have no server that stores your data.</li>
+    </ul>
+
+    <h2>Your rights</h2>
+    <p>Because HereProof v1 does not collect or store any of your data on our servers, the practical effect of most formal "data subject rights" is automatic:</p>
+    <ul>
+      <li><strong>Right to be forgotten</strong>: delete the app.</li>
+      <li><strong>Right of access</strong>: there is no server-side record to access.</li>
+      <li><strong>Right to rectification</strong>: you can always retake a HereProof or edit the description / location toggle before committing.</li>
+      <li><strong>Right to data portability</strong>: your HereProof is an image. You can share it, save it, or send it anywhere iOS's share sheet supports.</li>
+      <li><strong>Right to object / withdraw consent</strong>: leave the Include location toggle off, or revoke camera / location permission in iOS Settings.</li>
+    </ul>
+    <p>If you still have a question, you can email us at <a href="mailto:Tom.Friend@GravityLock.AI">Tom.Friend@GravityLock.AI</a>.</p>
+
+    <h2>Children's privacy</h2>
+    <p>HereProof is not directed at children under 13 and is not intended for use by children under 13. We do not knowingly collect information from children. Because we collect no personal information from anyone in v1, this is structurally enforced.</p>
+
+    <h2>Security</h2>
+    <p>Because HereProof v1 holds no server-side data, the attack surface for your data is limited to your own iPhone. iOS's standard protections apply: data stored in app preferences is only accessible to HereProof (not to other apps) while HereProof is installed; it is wiped when you delete the app.</p>
+    <p>The photo you capture is held in memory during the Create flow and is never written to a separate HereProof file. When you share it via iOS, you are handing it to another app (e.g., Messages); that app stores it according to its own policy.</p>
+
+    <h2>International transfers</h2>
+    <p>No transfers. We do not operate a server and we do not transfer your data across borders. Any cross-border handling of an image you shared happens inside the receiving app (e.g., Messages routes through Apple's infrastructure; another app may route through its own).</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If HereProof's data handling changes — for example, when future versions introduce server-backed features currently deferred behind internal feature flags — we will update this policy, bump the Version and Effective Date at the top, and surface the change in the app's About screen. We will not retroactively apply any new data collection to HereProofs you created under a prior policy version.</p>
+    <p><strong>Planned future capabilities (not in v1, not active):</strong> HereProof's long-term architecture includes a verifier service, on-chain anchoring, and payment rails. None of these are active in v1. When any of them ship, this policy will be updated in advance with a corresponding Effective Date, and those features will only activate for users on a build that post-dates the updated policy.</p>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/support">Support</a>
+    </nav>
+
+    <footer>
+      &copy; 2026 Gravity Lock AI LLC. Contact: <a href="mailto:Tom.Friend@GravityLock.AI">Tom.Friend@GravityLock.AI</a>
+    </footer>
+  </main>
+</body>
+</html>

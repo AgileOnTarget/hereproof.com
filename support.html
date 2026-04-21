@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HereProof — Support</title>
+  <meta name="description" content="HereProof support. Contact and answers to common questions.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --fg: #111111;
+      --muted: #666666;
+      --accent: #0a7cff;
+      --border: #e6e6e6;
+      --card: #f8f8f8;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111111;
+        --fg: #f5f5f5;
+        --muted: #a0a0a0;
+        --accent: #4ea8ff;
+        --border: #2a2a2a;
+        --card: #1a1a1a;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+    header { margin-bottom: 2rem; }
+    h1 { font-size: 2rem; margin: 0 0 0.25rem; letter-spacing: -0.01em; }
+    .meta { color: var(--muted); font-size: 0.9rem; }
+    h2 { font-size: 1.25rem; margin: 2.25rem 0 0.5rem; }
+    h3 { font-size: 1rem; margin: 1.5rem 0 0.35rem; }
+    p { margin: 0.5rem 0; }
+    ul { margin: 0.5rem 0 1rem; padding-left: 1.25rem; }
+    li { margin: 0.25rem 0; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .contact {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .contact h2 { margin-top: 0; }
+    details {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      margin: 0.5rem 0;
+    }
+    details[open] { background: var(--card); }
+    summary {
+      font-weight: 600;
+      cursor: pointer;
+      padding: 0.25rem 0;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::before {
+      content: "▸ ";
+      color: var(--muted);
+      margin-right: 0.25rem;
+    }
+    details[open] summary::before {
+      content: "▾ ";
+    }
+    nav {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+    footer {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>HereProof — Support</h1>
+      <p class="meta">Small app. Real person on the other end of the email.</p>
+    </header>
+
+    <div class="contact">
+      <h2>Contact</h2>
+      <p>For any question, issue, or comment about HereProof:</p>
+      <p><strong>Email:</strong> <a href="mailto:Tom.Friend@GravityLock.AI">Tom.Friend@GravityLock.AI</a></p>
+      <p>We read every message. There's no support queue, no ticket system, no chatbot.</p>
+    </div>
+
+    <h2>Common questions</h2>
+
+    <details>
+      <summary>Is my photo uploaded anywhere?</summary>
+      <p>No. HereProof has no server. Your photo stays on your iPhone until you tap Share. When you share it, iOS's share sheet hands it to whatever app you pick — Messages, Mail, Photos, etc. HereProof doesn't see or route that share.</p>
+    </details>
+
+    <details>
+      <summary>What's a "presence credit"?</summary>
+      <p>It's a simple counter that gates the Create button. HereProof seeds you one credit on first launch. Creating a HereProof uses the credit. In v1 the credit system is a demonstration — it shows the gate working without any payment or account layer behind it. Future versions may let credits come from other places, but for now it's just the single seed.</p>
+    </details>
+
+    <details>
+      <summary>How do I get more presence credits?</summary>
+      <p>In v1, delete and reinstall the app to reset the demo seed. There's no purchase, no earning mechanism, no account. v1 is a demo of the flow, not a full production product.</p>
+    </details>
+
+    <details>
+      <summary>Can I turn off the city / date text on my HereProof?</summary>
+      <p>Yes. On the review screen (after taking the photo), leave the "Include location" toggle off and the "Describe this moment" field empty. The resulting HereProof will just be the photo with the timestamp at the bottom.</p>
+    </details>
+
+    <details>
+      <summary>Why does HereProof want my location?</summary>
+      <p>Only if you ask it to. The "Include location" toggle is off by default. When you turn it on, iOS asks you for permission. HereProof uses CoreLocation to get a coarse fix, converts it to "City, State" on your phone, and renders that string onto the image you'll share. The raw coordinates never leave your device.</p>
+    </details>
+
+    <details>
+      <summary>I denied the camera permission. How do I re-enable it?</summary>
+      <p>iOS holds onto the permission decision. Go to <strong>Settings → HereProof → Camera</strong> on your iPhone and toggle it on. Same for Location if you also want that.</p>
+    </details>
+
+    <details>
+      <summary>I deleted the app. Can I recover my HereProofs?</summary>
+      <p>A HereProof isn't stored in the app after you share it — it lives wherever you sent it (Messages thread, Photos, etc.). Deleting HereProof clears the app's small on-device state (the credit count and in-memory session data) and nothing else. HereProofs you've already sent are unaffected.</p>
+    </details>
+
+    <details>
+      <summary>Is HereProof a crypto / NFT / wallet app?</summary>
+      <p>No. HereProof v1 is a small consumer app for capturing and sharing a moment. There are no tokens, no wallets, no blockchain, no cryptocurrency. The name is literal — "here" (where you are) + "proof" (what you captured).</p>
+    </details>
+
+    <details>
+      <summary>What iPhones and iOS versions does HereProof support?</summary>
+      <p>HereProof supports iPhone running iOS 16 or later. It's iPhone-only in v1 (no iPad, no Mac).</p>
+    </details>
+
+    <details>
+      <summary>Is HereProof free?</summary>
+      <p>Yes. No in-app purchases, no subscription, no ads.</p>
+    </details>
+
+    <h2>Privacy</h2>
+    <p>HereProof's privacy stance is short: we don't run a server, we don't have accounts, we don't track you, we don't collect your data. The full policy is at <a href="/privacy">hereproof.com/privacy</a>.</p>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/privacy">Privacy Policy</a>
+    </nav>
+
+    <footer>
+      &copy; 2026 Gravity Lock AI LLC. Contact: <a href="mailto:Tom.Friend@GravityLock.AI">Tom.Friend@GravityLock.AI</a>
+    </footer>
+  </main>
+</body>
+</html>
