@@ -174,6 +174,77 @@
     .how{
       display:grid;grid-template-columns:repeat(2,1fr);gap:22px;
     }
+
+    /* Why presence credits matter */
+    .credits-panel{
+      background:linear-gradient(135deg,rgba(34,211,197,.12),rgba(124,92,255,.09));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:40px;
+      box-shadow:var(--shadow);
+    }
+    .credits-flow{
+      display:flex;align-items:center;justify-content:center;
+      gap:20px;flex-wrap:wrap;
+      padding:8px 0 32px;
+      border-bottom:1px solid var(--line);
+      margin-bottom:32px;
+    }
+    .flow-node{
+      display:flex;flex-direction:column;align-items:center;gap:12px;
+      min-width:170px;text-align:center;
+    }
+    .flow-icon{
+      width:96px;height:96px;border-radius:24px;
+      display:grid;place-items:center;
+      border:1px solid var(--line);
+    }
+    .flow-icon-credit{
+      background:linear-gradient(135deg,rgba(34,211,197,.22),rgba(34,211,197,.08));
+      color:var(--teal);
+      box-shadow:0 10px 30px rgba(34,211,197,.22);
+    }
+    .flow-icon-herph{
+      background:linear-gradient(135deg,rgba(124,92,255,.22),rgba(124,92,255,.08));
+      padding:8px;overflow:hidden;
+      box-shadow:0 10px 30px rgba(124,92,255,.22);
+    }
+    .flow-icon-herph img{
+      width:100%;height:100%;object-fit:contain;
+    }
+    .flow-icon-proof{
+      background:linear-gradient(135deg,rgba(255,190,61,.22),rgba(255,190,61,.08));
+      color:var(--gold);
+      box-shadow:0 10px 30px rgba(255,190,61,.22);
+    }
+    .flow-label strong{
+      display:block;color:var(--text);font-size:1.02rem;margin-bottom:2px;
+    }
+    .flow-label span{
+      color:var(--muted);font-size:.88rem;
+    }
+    .flow-arrow{
+      font-size:1.8rem;color:var(--muted);font-weight:300;
+      align-self:center;
+    }
+    .credits-rules{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+    }
+    .credits-rule{
+      display:flex;gap:12px;align-items:flex-start;
+    }
+    .credits-rule .rule-dot{
+      width:10px;height:10px;border-radius:50%;
+      background:var(--teal);
+      margin-top:8px;flex-shrink:0;
+      box-shadow:0 0 0 4px rgba(34,211,197,.18);
+    }
+    .credits-rule strong{
+      display:block;color:var(--text);font-size:1.02rem;margin-bottom:4px;
+    }
+    .credits-rule p{
+      color:var(--muted);font-size:.94rem;margin:0;
+    }
     .step{display:flex;gap:18px;align-items:flex-start}
     .step-num{
       min-width:44px;height:44px;border-radius:12px;
@@ -220,6 +291,10 @@
       .stat-row{grid-template-columns:1fr}
       .grid-3{grid-template-columns:1fr}
       .guide{grid-template-columns:1fr}
+      .credits-flow{flex-direction:column;gap:8px}
+      .flow-arrow{transform:rotate(90deg)}
+      .credits-rules{grid-template-columns:1fr}
+      .credits-panel{padding:28px}
       .note-a,.note-b,.note-c{position:static;margin-top:12px;max-width:none}
       .hero-card-inner{gap:18px}
     }
@@ -242,6 +317,7 @@
       </a>
       <nav class="nav-links">
         <a href="#what">What it is</a>
+        <a href="#credits">Presence credits</a>
         <a href="#how">How it works</a>
         <a href="#guide">Meet Herph</a>
         <a href="/support">Support</a>
@@ -255,11 +331,11 @@
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <div class="eyebrow">HereProof • iPhone app</div>
-          <h1>Turn a moment into something you can share.</h1>
+          <h1>You need a presence credit to make a HereProof.</h1>
           <p class="lead">
-            HereProof is the simplest way to mark a moment so you can share it later.
-            Take a photo inside the app. Add an optional note and the city where you were.
-            Share it through iOS. Herph — your little sidekick — guides the whole thing.
+            That's the point. A HereProof isn't just a photo — it's proof you were there.
+            You spend one presence credit, capture the moment, add the context,
+            and send it on. Herph — your little sidekick — guides the whole thing.
           </p>
           <div class="actions">
             <a class="btn btn-primary" href="#how">See how it works</a>
@@ -341,6 +417,66 @@
               with the context baked in, so your friend doesn't need HereProof to see it.
             </p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="credits">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Why presence credits matter</h2>
+          <p>
+            A HereProof is not just a photo. <strong>You need a presence credit to make one.</strong>
+            That's the difference.
+          </p>
+        </div>
+        <div class="credits-panel">
+          <div class="credits-flow" aria-hidden="true">
+            <div class="flow-node">
+              <div class="flow-icon flow-icon-credit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 9.5c0-1 .9-1.8 2.2-1.8 1.4 0 2.3.8 2.3 1.8 0 .9-.6 1.4-1.6 1.7l-1.4.4c-1 .3-1.6.8-1.6 1.7 0 1 .9 1.8 2.3 1.8 1.3 0 2.2-.8 2.2-1.8"/></svg>
+              </div>
+              <div class="flow-label"><strong>1 presence credit</strong><span>Not for sale. Not a balance.</span></div>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-node">
+              <div class="flow-icon flow-icon-herph">
+                <img src="herph_hero.png" alt="" />
+              </div>
+              <div class="flow-label"><strong>Capture + confirm</strong><span>Herph guides you through it.</span></div>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-node">
+              <div class="flow-icon flow-icon-proof">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="12" cy="11" r="3"/><path d="M5 17l3-3 2 2 4-4 5 5"/></svg>
+              </div>
+              <div class="flow-label"><strong>1 HereProof</strong><span>Yours. Shareable. Real.</span></div>
+            </div>
+          </div>
+
+          <div class="credits-rules">
+            <div class="credits-rule">
+              <span class="rule-dot"></span>
+              <div>
+                <strong>Presence credits aren't for sale.</strong>
+                <p>You can't buy them. You can't stockpile them. They're not a balance or a currency.</p>
+              </div>
+            </div>
+            <div class="credits-rule">
+              <span class="rule-dot"></span>
+              <div>
+                <strong>One credit, one HereProof.</strong>
+                <p>You spend one credit, you get one HereProof. The counter goes down by one. You can't undo it.</p>
+              </div>
+            </div>
+            <div class="credits-rule">
+              <span class="rule-dot"></span>
+              <div>
+                <strong>That constraint is the product.</strong>
+                <p>The gate is what says "you had to be there." It's why a HereProof means something that a screenshot doesn't.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
